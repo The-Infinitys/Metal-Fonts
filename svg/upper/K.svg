@@ -12,5 +12,5 @@
   h -12
   l -32,40
   l 8,-40
-  " fill="#000000" stroke="#ffffff" fill-rule="evenodd" stroke-width="1" />
+  " fill="#000000" stroke="none" fill-rule="evenodd"  />
 </svg>

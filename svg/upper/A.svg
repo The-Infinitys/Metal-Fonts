@@ -16,5 +16,5 @@
   h 14
   l -1,-30
   z
-  " fill-rule="evenodd" fill="#000000" stroke="#ffffff" stroke-width="1" />
+  " fill-rule="evenodd" fill="#000000" stroke="none" />
 </svg>

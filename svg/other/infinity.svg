@@ -17,5 +17,5 @@
   h -10
   l -8,-10
   z
-  " fill="#000000" stroke="#ffffff" stroke-width="1" />
+  " fill="#000000" stroke="none" />
 </svg>
