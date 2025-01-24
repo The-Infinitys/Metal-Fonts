@@ -9,7 +9,7 @@
 
 ## 進捗
 
-最終更新: 2025/01/20
+最終更新: 2025/01/24
 
 小文字: 
 
@@ -17,4 +17,4 @@
 
 大文字: 
 
-```[ABCDEFGHIJKLMNOPQRSTUV....]```
+```[ABCDEFGHIJKLMNOPQRSTUVWX..]```
