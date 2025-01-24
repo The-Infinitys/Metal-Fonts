@@ -2,11 +2,12 @@
   <path d="
   M 0,0
   m 30,0
-  l 5,100
-  l 45,-100
+  l 0,100
+  h 10
+  l 40,-100
   h -10
-  l -27,60
-  l -3,-60
+  l -30,75
+  l 0,-75
   z
   " fill="#000000" stroke="none" fill-rule="evenodd"  />
 </svg>
