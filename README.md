@@ -16,5 +16,5 @@
 ```[....................................]```
 
 大文字: 
-
-```[ABCDEFGHIJKLMNOPQRSTUVWX..]```
+COMPLETE!
+```[ABCDEFGHIJKLMNOPQRSTUVWXYZ]```
