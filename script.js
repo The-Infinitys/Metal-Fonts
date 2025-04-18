@@ -16,28 +16,34 @@ async function loadSVG(svgPath) {
     return null;
   }
 }
-const font_root = "/";
+const font_root = "";
 async function replaceTextWithSVG(metalFontsElement) {
   const fill = metalFontsElement.dataset.fill || metalFontsElement.style.color;
   const textContent = metalFontsElement.textContent;
   metalFontsElement.textContent = "";
 
-  for (const char of textContent) {
+  for (const originalChar of textContent) {
+    const char = originalChar.toUpperCase(); // 全て大文字に変換
+
     let svgPath = null;
-    let className = "svg-letter"; // 基本クラス
+    let classNameBase = "svg-letter"; // 基本クラス
+    let specificClassName = "";
+    console.log(char);
     if (char >= "A" && char <= "Z") {
       svgPath = `${font_root}/svg/upper/${char}.svg`;
-      className += ` svg-letter-${char}`; // 文字ごとのクラスを追加
+      specificClassName = `svg-letter-${char}`; // 文字ごとのクラス
     } else if (char === "'") {
       svgPath = `${font_root}/svg/other/single-qt.svg`;
-      className += ` svg-letter-single-qt`;
+      specificClassName = `svg-letter-single-qt`;
     } else if (char === '"') {
       svgPath = `${font_root}/svg/other/double-qt.svg`;
-      className += ` svg-letter-double-qt`;
+      specificClassName = `svg-letter-double-qt`;
+    } else if (char === " ") {
+      svgPath = `${font_root}/svg/other/space.svg`;
+      specificClassName = `svg-letter-space`;
     }
 
     if (svgPath) {
-      alert("try to get", svtPath);
       const svgElement = await loadSVG(svgPath);
 
       if (svgElement) {
@@ -57,16 +63,21 @@ async function replaceTextWithSVG(metalFontsElement) {
             });
         }
 
-        svgElement.classList.add(className); // クラスを追加
+        svgElement.classList.add(classNameBase); // 基本クラスを追加
+        if (specificClassName) {
+          svgElement.classList.add(specificClassName); // 文字ごとのクラスを追加
+        }
         metalFontsElement.appendChild(svgElement);
       } else {
+        // SVG読み込み失敗時も元の文字を表示する
         const errorSpan = document.createElement("span");
-        errorSpan.textContent = char;
+        errorSpan.textContent = originalChar; // 元の文字を表示
         metalFontsElement.appendChild(errorSpan);
       }
     } else {
+      // SVGパスが見つからない場合も元の文字を表示する
       const otherCharSpan = document.createElement("span");
-      otherCharSpan.textContent = char;
+      otherCharSpan.textContent = originalChar; // 元の文字を表示
       metalFontsElement.appendChild(otherCharSpan);
     }
   }
