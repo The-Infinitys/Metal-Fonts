@@ -1,0 +1,22 @@
+
+metal-fonts {
+  display: inline-block; /* 必要に応じて */
+  font-size: 100px; /* 基本となるフォントサイズ */
+}
+.svg-letter {
+  display: inline-block; /* SVG要素をインラインブロックとして配置 */
+  height: 1em; /* 親要素のフォントサイズに合わせる */
+}
+/* CSSで各文字の幅を調整 */
+.svg-letter-I {
+  width: 0.5em; /* 例: 'I' の幅を狭く */
+}
+.svg-letter-W {
+  width: 1.2em; /* 例: 'W' の幅を広く */
+}
+.svg-letter-single-qt {
+  width: 0.3em; /* 例: シングルクオートの幅 */
+}
+.svg-letter-double-qt {
+  width: 0.6em; /* 例: ダブルクオートの幅 */
+}
