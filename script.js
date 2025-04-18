@@ -16,7 +16,7 @@ async function loadSVG(svgPath) {
     return null;
   }
 }
-const font_root = "";
+const font_root = "/Metal-Fonts";
 async function replaceTextWithSVG(metalFontsElement) {
   const fill = metalFontsElement.dataset.fill || metalFontsElement.style.color;
   const textContent = metalFontsElement.textContent;
