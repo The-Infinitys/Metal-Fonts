@@ -1,0 +1,23 @@
+<svg viewBox="0 0 80 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="
+  M 0,0
+  m 30,0
+  l -20,100
+  h 10
+  l 9,-45
+  l 31,45
+  h 10
+  l -34,-50
+  h 25
+  l 12,-10
+  l 6,-30
+  l -8,-10
+  z
+  m 8,10
+  h 25
+  l 4,5
+  l -4,20
+  l -6,5
+  h -25
+  " fill="#000000" fill-rule="evenodd" stroke="none" />
+</svg>
